@@ -17,13 +17,13 @@ public class MyArrayTest {
         myArray.myArrayInsert(5,5);
 
         // 新增
-      //  myArray.myArrayInsert(2,3);
+        myArray.myArrayInsert(2,3);
         // 删除
-      //  myArray.myArrayDel(0);
+        myArray.myArrayDel(0);
 
         // 查询
-//        int i = myArray.myArrayFind(4);
-//        System.out.println("对应的索引位置：" + i);
+        int i = myArray.myArrayFind(4);
+        System.out.println("对应的索引位置：" + i);
 
         myArray.myArrayModify(1,9);
 
