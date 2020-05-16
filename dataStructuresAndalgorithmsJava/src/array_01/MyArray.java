@@ -1,5 +1,7 @@
 package array_01;
 
+import javax.swing.text.StyledEditorKit;
+import java.net.SocketTimeoutException;
 import java.sql.SQLOutput;
 
 /** java实现数组
@@ -52,6 +54,56 @@ public class MyArray {
         array[index] = value;
         count ++ ;
         System.out.println("插入成功");
+        return true;
+    }
+
+    /**
+     * 删除指定位置的数
+     * @param index 索引
+     */
+    protected boolean myArrayDel(int index){
+        if (index < 0 || index >= count){
+            System.out.println("索引越界");
+            return false;
+        }
+
+        for (int i = index; i < count - 1; i++) {
+            array[i] = array[i + 1];
+        }
+        count --;
+        System.out.println("删除成功");
+        return true;
+    }
+
+    /**
+     * 数组查询
+     * @param value 待查询的值
+     * @return 返回该值对应的索引
+     */
+    protected int myArrayFind(int value){
+        for (int i = 0; i < count; i++) {
+            if (array[i] == value){
+                System.out.println("查询成功");
+                return i;
+            }
+        }
+        System.out.println("查询不成功，该数不存在");
+        return -1;
+    }
+
+    /**
+     * 修改替换指定位置的数据
+     * @param index 指定位置索引
+     * @param value 值
+     * @return 是否修改成功
+     */
+    protected boolean myArrayModify(int index,int value){
+        if (index < 0 || index >= count){
+            System.out.println("索引越界");
+            return false;
+        }
+
+        array[index] = value;
         return true;
     }
 
