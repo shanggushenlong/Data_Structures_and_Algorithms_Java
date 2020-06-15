@@ -1,4 +1,6 @@
-package array_01;
+package array_01.array;
+
+import array_01.array.MyArray;
 
 /** 测试数组相关方法
  * @USER: shangushenlong

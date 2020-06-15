@@ -1,4 +1,6 @@
-package array_01;
+package array_01.array;
+
+import com.sun.istack.internal.Nullable;
 
 import javax.swing.text.StyledEditorKit;
 import java.net.SocketTimeoutException;
@@ -16,7 +18,7 @@ public class MyArray {
     // 数组实际长度
     private int count;
     // 数组实际存储
-    private int array[];
+    private int[] array;
 
     /**
      * 构造方法-初始化
